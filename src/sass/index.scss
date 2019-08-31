@@ -1,23 +1,28 @@
 @import 'public';
+// logo头部版块
 .logo{
 	height: 120px;
+	// 头部版心
 	.logo_con{
 		width: 1196px;
 		height: 120px;
 		margin: 0 auto;
+		// logo
 		h1{
 			float: left;
 		}
+		// 搜索框版块
 		.search{
 			float: left;
 			width: 600px;
 			margin-top: 30px;
 			height: 64px;
 			margin-right : 20px;
+			// 输入框版块
 			.sr-btn{
 				width: 600px;
 				height: 40px;
-				
+				// 输入框
 				.txt{
 					float: left;
 					height: 36px;
@@ -27,6 +32,7 @@
 					font-size: 14px;
 					color: #999;
 				}
+				// 搜索按钮
 				.btn{
 					float: left;
 					width: 120px;
@@ -40,6 +46,7 @@
 					letter-spacing: 10px; 
 				}
 			}
+			// 提示文字
 			p{
 				a{
 					display: inline-block;
@@ -50,6 +57,7 @@
 				}
 			}
 		}
+		// 购物车
 		.cart{
 			float: left;
 			margin-top: 30px;
@@ -65,6 +73,7 @@
 				font-size: 18px;
 			}
 		}
+		// 二维码
 		.two-code{
 			float: right;
 			height:120px;
@@ -91,36 +100,56 @@
 		}
 	}
 }
+// banner图版块
 #banner{
 	height: 420px;
 	width: 1519px;
 	overflow: hidden;
 	position:relative;
-	.banner_con{
+	// 轮播图版块
+	.pic{
+		height: 420px;
 		position: absolute;
-		width: 1196px;
-		left: 50%;
-		margin-left: -598px;
-		height:420px;
+		width: 600%;
+		left : 0;
+		top: 0px;
+		.pic_box{
+			float: left;
+			height : 420px;
+			img{
+				margin: 0 auto;
+			}
+		}
+	}
+	// 小图版块
+	.small{
+		width : 1196px;
+		margin: 0 auto;
+		position : relative;
+		height : 420px;
 		z-index : 1;
-		ul{
-			width:148px;
+		// 左二级菜单
+		ol{
+			width:196px;
 			height: 384px;
 			float: left;
 			background: #000000;
 			opacity: 0.7;
-			padding: 18px 24px;
+			padding : 18px 0px;
 			li{
+			width:148px;	
+			padding: 0px 24px;
 				a{
 					display: block;
 					height: 64px;
 					width: 148px;
 					color: #ffffff;
 					line-height: 64px;
-					font-size: 16px;
+					font-size: 12px;
 				}
 			}
 		}
+		// 右注册框
 		.banner_r{
 			background: #fff;
 			height: 384px;
@@ -145,7 +174,7 @@
 				font-size: 12px;
 				color: #999;
 				margin:5px 0 ;
-				span{
+				i{
 					color: #333;
 				}
 			}
@@ -202,27 +231,6 @@
 			}
 			
 		}
-	}
-	.pic{
-		height: 420px;
-		position: absolute;
-		width: 600%;
-		left : 0;
-		top: 0px;
-		.pic_box{
-			float: left;
-			height : 420px;
-			img{
-				margin: 0 auto;
-			}
-		}
-	}
-	.small{
-		width : 1196px;
-		margin: 0 auto;
-		position : relative;
-		height : 420px;
-		z-index : 1;
 		span{
 			background :  url(../img/cae7b801-0fe6-4691-ba99-239ba9d11576.png) no-repeat center;
 			background-size: cover;
@@ -235,10 +243,12 @@
 			display: none;
 			cursor: pointer;
 		}
+		// 左按钮
 		.lt_btn{
 			@include position(absolute,200px,195px);
 			background: url(../img/2a7f8349-14f0-42e1-afe8-7ae8afd54e1e.png) no-repeat center;
 		}
+		// 小图列表
 		ul{
 			position: absolute;
 			z-index: 1;
@@ -270,6 +280,7 @@
 		}
 	}
 }
+// 主体部分导航公共样式
 %main_nav{
 	line-height : 60px;
 	font-size: 16px;
@@ -299,6 +310,7 @@
 		}
 	}
 }
+// 商品公共板块
 %main_dl{
 	@include size(228px,278px);
 	float: left;
@@ -308,10 +320,16 @@
 	overflow: hidden;
 	position: relative;
 	padding-top : 20px;
-	img{
+	h6{
 		@include size(160px,160px);
 		margin: 0 auto;
+		position: relative;
+		img{
+			@include size(160px,160px);
+			margin: 0 auto;
+		}
 	}
+	
 	h4{
 		font-size: 14px;
 		line-height: 1;
@@ -356,14 +374,16 @@
 	}
 }
 
-
+// 主体部分
 #main{
 	background: #f2f2f2;
 	overflow: hidden;
+	// 主体版心
 	.main_con{
 		width: 1196px;
 		margin: 0 auto;
 		padding-top:15px;
+		// 图片商品版块1
 		.product_type1{
 			overflow : hidden;
 			.type1_pic1{
@@ -386,6 +406,7 @@
 				}
 			}
 		}
+		// 生活惠版块
 		.live_type{
 			margin: 20px 0px;
 			h2{
@@ -407,6 +428,7 @@
 					line-height: 30px;
 				}
 			}
+			// 案例版块
 			.live_type_case{
 				width: 1250px;
 				overflow: hidden;
@@ -420,11 +442,18 @@
 					background:#fff;
 					text-align: center;
 				}
-				img{
-					width: 161px;
-					height: 161px;
+				h6{
+					width: 160px;
+					height: 160px;
 					margin: 0 auto;
+					position : relative;
+					img{
+						width: 160px;
+						height: 160px;
+						margin: 0 auto;
+					}
 				}
+				
 				dt{
 					font-size: 14px;
 					line-height: 30px;
@@ -454,6 +483,7 @@
 				}
 			}
 		}
+		// 超级电视版块
 		.super_tv{
 			overflow:hidden;
 			.super_tv_top{
@@ -495,10 +525,17 @@
 						}
 						
 					}
-					img{
-						@include size(230px,230px);
+					h6{
+						width: 230px;
+						height: 230px;
 						margin: 0 auto;
+						position: relative;
+						img{
+							@include size(230px,230px);
+							margin: 0 auto;
+						}
 					}
+					
 					h4{
 						font-size: 14px;
 						line-height: 1;
@@ -554,7 +591,6 @@
 			width: 1196px;
 			margin: 20px auto;
 			height: 120px;
-			background: #00ffff;
 		}
 		.accessories{
 			overflow: hidden;
@@ -564,6 +600,9 @@
 			.acs_l{
 				@include size(236px,608px);
 				float: left;
+				img{
+					@include size(236px,608px);
+				}
 			}
 			.acs_r{
 				@include size(960px,608px);
@@ -593,6 +632,9 @@
 				.live_house_lpic{
 					@include size(236px,298px);
 					float: left;
+					img{
+						@include size(236px,298px);
+					}
 				}
 				dl{
 					@extend %main_dl;
@@ -604,6 +646,9 @@
 				.live_house_lpic{
 					@include size(236px,298px);
 					float: left;
+					img{
+						@include size(236px,298px);
+					}
 				}
 				dl{
 					@extend %main_dl;
@@ -611,9 +656,12 @@
 			}
 		}
 		.waterfall{
+			width: 1220px;
 			overflow:hidden;
 			dl{
 				@extend %main_dl;
+				@include size(228px,298px);
+				margin: 0px 14px 12px 0px;
 			}
 		}
 		.main_foot{
