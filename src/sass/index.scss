@@ -67,14 +67,16 @@
 				display: block;
 				width: 120px;
 				height: 38px;
-				color: #2884c7;
-				line-height: 38px;
-				text-align: center;
-				font-size: 18px;
+				background: url(../img/cart_bj1_03.jpg) no-repeat center;
+				background-size: cover;
+			}
+			a:hover{
+				background: url(../img/cart_bj_03.jpg) no-repeat center;
+				background-size: cover;
 			}
 		}
 		// 二维码
-		.two-code{
+		.two_code{
 			float: right;
 			height:120px;
 			p{
@@ -95,6 +97,7 @@
 					position: absolute;
 					top: 0 ;
 					right: -14px;
+					cursor: pointer;
 				}
 			}	
 		}
@@ -133,12 +136,67 @@
 			width:196px;
 			height: 384px;
 			float: left;
-			background: #000000;
-			opacity: 0.7;
+			background: rgba(0,0,0,0.7);
 			padding : 18px 0px;
+			position : relative;
+			.two_menu{
+				width: 1000px;
+				background: #fff;
+				position: absolute;
+				height : 380px;
+				padding-top : 40px;
+				left : 196px;
+				top : 0px;
+				display : none;
+				// z-index : 100;
+				section{
+					float: left;
+					overflow: hidden;
+					width: 230px;
+					padding-left: 20px;
+					
+					dl{
+						width: 120px;
+						height: 40px;
+						margin-bottom: 40px;
+						img{
+							width: 60px;
+							height: 40px;
+							float: left;
+							margin-right: 10px;
+						}
+						dt{
+							font-weight: bold;
+							font-size: 14px;
+							line-height: 20px;
+							width: 50px;
+							height: 20px;
+							text-align: center;
+							float: left;
+						}
+						dd{
+							font-size: 14px;
+							font-weight: bold;
+							text-align: center;
+							float: left;
+							width: 50px;
+						}
+					}
+				}
+			}
 			li{
-			width:148px;	
-			padding: 0px 24px;
+				width:148px;	
+				padding: 0px 24px;
+				position : relative;
+				span{
+					display: block;
+					@include size(8px,12px);
+					background : url(../img/bc68fd78-3e37-4aaf-9909-6b7d496d46f7.png) no-repeat center;
+					background-size : cover;
+					position: absolute;
+					right: 6px;
+					top:28px;
+				}
 				a{
 					display: block;
 					height: 64px;
@@ -146,7 +204,9 @@
 					color: #ffffff;
 					line-height: 64px;
 					font-size: 12px;
+					opacity: 1;
 				}
+				
 			}
 		}
 		// 右注册框
@@ -223,7 +283,7 @@
 				}
 				dd{
 					a{
-						color: #999;
+						color: #333;
 						line-height: 30px;
 						font-size: 12px;
 					}

@@ -1,0 +1,192 @@
+@import 'public';
+.topWrap{
+	@include size(1440px,90px)
+	margin: 0 auto;
+	overflow : hidden;
+	h1{
+		float: left;
+		padding: 30px 0 0 45px;
+		img{
+			@include size(162px,48px)
+		}
+	}
+	ul{
+		float: right;
+		@include size(310px,20px);
+		margin: 60px 30px 0 0;
+		li{
+			float: left;
+			padding: 0 8px;
+			border-right:3px solid #969696;
+			span{
+				font-size: 14px;
+				color: #969696;
+				line-height: 20px;
+			}
+			a{
+				font-size: 14px;
+				line-height: 20px;
+				color: #969696;
+			}
+		}
+		li:last-child{
+			border-right: 0;
+		}
+	}
+}
+#main{
+	@include size(100%,480px);
+	overflow: hidden;
+	background: url(../img/operatbg.jpg) no-repeat center;
+	.main_con{
+		width: 1440px;
+		margin: 0 auto;
+		padding-top: 10px;
+		.main_r{
+			@include size(380px,450px);
+			float: right;
+			padding : 0 25px;
+			background : #fff;
+			padding-top : 10px;
+			p{
+				@include size(100%,30px)
+				line-height: 30px;
+				font-size: 12px;
+				// color: #d31723;
+				overflow : hidden;
+				
+				span{
+					font-size: 18px;
+					float: left;
+					line-height: 30px;
+					color: #000000;
+					font-weight: 400;
+				}
+				a{
+					float: right;
+					font-size: 14px;
+					color: #529bef;
+				}
+			}
+			.notice{
+				@include size(100%,30px);
+				.notice_con{
+					@include size(365px,30px);
+					line-height: 30px;
+					font-size: 12px;
+					color: #d31723;
+					padding-left: 15px;
+					background : url(../img/icon1x.png) no-repeat 0px -95px;
+					display: none;
+				}
+			}
+			ul{
+				li{
+					width: 100%;
+					margin-bottom: 15px;
+					border: 1px solid #ccc;
+					height: 42px;
+					i{
+						display: block;
+						@include size(25px,29px);
+						float: left;
+						background: url(../img/icon1x.png) no-repeat 0 0;
+						margin: 10px 0 0 14px;
+					}
+					input{
+						@include size(270px,24px);
+						float: left;
+						margin: 9px 0;
+						font-size: 14px;
+					}
+					span{
+						display: block;
+						@include size(64px,42px);
+						float: left;
+					}
+				}
+				li:nth-of-type(1){
+					span{
+						background: url(../img/countryAreaFlagBig.png) no-repeat 10px 7px;
+						display: none;
+					}
+				}
+				li:nth-of-type(2){
+					i{
+						background: url(../img/icon1x.png) no-repeat -201px 0;
+					}
+				}
+				li:nth-of-type(3){
+					i{
+						background: url(../img/icon1x.png) no-repeat -298px 5px;
+					}
+					span{
+						text-align: center;
+						line-height: 42px;
+						font-size: 14px;
+						color: #333;
+						background: #00ffff;
+						cursor: pointer;
+					}
+				}
+				li:nth-of-type(4){
+					border : 0;
+					.li_div{
+						@include size(228px,40px);
+						float: left;
+						border: 1px solid #ccc;
+						i{
+							background: url(../img/icon1x.png) no-repeat -401px 4px;
+						}
+						input{
+							@include size(176px,24px);
+						}
+					}
+					a{
+						display: block;
+						@include size(134px,40px);
+						margin-left: 14px;
+						float: left;
+						border: 1px solid #529bef;
+						text-align: center;
+						line-height: 40px;
+						color: #529bef;
+						font-size: 14px;
+					}	
+				}
+				li:nth-of-type(5){
+					border: 0;
+					margin: 0;
+					line-height: 42px;
+					font-size: 12px;
+					color: #666666;
+					input{
+						@include size(12px,12px);
+						margin: 15px 5px 0 0;
+					}
+					span{
+						width: 90px;
+					}
+					a{
+						color: #529bef;
+						text-decoration: underline;
+					}
+				}
+				li:nth-of-type(6){
+					border: 0;
+					a{
+						display: block;
+						@include size(380px,42px);
+						background: #529bef;
+						color: #fff;
+						font-size: 16px;
+						font-weight: bold;
+						letter-spacing: 10px;
+						text-align: center;
+						line-height: 42px;
+					}
+				}
+			}
+		}
+	}
+}

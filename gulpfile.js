@@ -34,7 +34,7 @@ gulp.task('img',()=>{
 })
 //监听任务
 gulp.task('default',()=>{
-	gulp.watch('src/img/*.jpg',['img']);
+	gulp.watch('src/img/*.*',['img']);
 	gulp.watch('src/sass/*.scss',['css']);
 //	gulp.watch('src/js/*.js',['change']);
 	gulp.watch('src/js/*.js',['js']);

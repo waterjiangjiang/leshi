@@ -172,7 +172,7 @@ $.getJSON('json/bannerslider.json',function(data){
 	
 	// 瀑布流效果
 	$('.waterfall dl').each(function(i){
-		console.log($('.waterfall dl').children('h6'))
+		// console.log($('.waterfall dl').children('h6'))
 		$(this).mouseenter(function(){
 			$(this).children('h6').children('img').css({
 				'position' : 'absolute'	
@@ -326,20 +326,91 @@ $('.live_house dl').each(function(i){
 	})
 	
 })
-
-$('a').mouseenter(function(){
+// 主体部分a移入移出效果
+$('#main ul a').mouseenter(function(){
 	$(this).css('color','#2884c7')
 })
-$('a').mouseleave(function(){
+$('#main ul a').mouseleave(function(){
 	$(this).css('color','#333333')
 })
 
-$('.banner_con ul li a').mouseenter(function(){
-	$(this).css({'color':'#ffffff','background' : '#2884c7',"opacity":" 0.7"})
+// 生活惠
+$('#main .live_type h2 a').mouseenter(function(){
+	$(this).css('color','#2884c7')
 })
-$('.banner_con ul li a').mouseleave(function(){
-	$(this).css({'color':'#ffffff',"background":" #000000",
-			"opacity":" 0.7"})
+$('#main .live_type h2 a').mouseleave(function(){
+	$(this).css('color','#333333')
 })
 
+// banner 图有板块 a 效果
+// dd
+$('.banner_r dl dd a').mouseenter(function(){
+	$(this).css('color','#2884c7')
+})
+$('.banner_r dl dd a').mouseleave(function(){
+	$(this).css('color','#333333')
+})
+// dt
+$('.banner_r dl dt a').mouseenter(function(){
+	$(this).css('color','#2884c7')
+})
+$('.banner_r dl dt a').mouseleave(function(){
+	$(this).css('color','#999')
+})
+
+// 二维码效果
+$('.two_code p span').click(function(){
+	$(this).parent('p').parent('.two_code').css('display','none')
+	$('.cart').animate({
+		'margin-left' : '50px'
+	},200)
+})
+
+// 菜单栏
+$('.small ol li').each(function(i){
+	// console.log($(this));
+	$(this).mouseenter(function(){
+		$(this).css('background','#2884c7')
+		$(this).children('span').animate({
+			'width' : '10px',
+			'height' :'15px',
+			'top' : '26px'
+		},100)
+	})
+})
+
+
+$('.small ol li').each(function(i){
+	$(this).mouseleave(function(){
+		$(this).css('background','');
+		$(this).children('span').animate({
+			'width' : '8px',
+			'height' :'12px',
+			'top' : '28px'
+		},100)
+	})
+})
+// 二级菜单
+$('.small ol li').each(function(i){
+	$(this).mouseenter(function(){
+		$(this).parent('ol').children('.two_menu').css('display','block');
+		// 字体颜色
+		$(this).parent('ol').children('.two_menu').children('section').children('dl').hover(function(){
+			$(this).children('dt').css('color','#2884c7')
+		},function(){
+			$(this).children('dt').css('color','#000')
+		})
+		$(this).parent('ol').children('.two_menu').children('section').children('dl').click(function(){
+			window.location = 'list.html'
+		})
+	})
+	// $(this).mouseleave(function(){
+	// 	$(this).parent('ol').children('.two_menu').css('display','none')
+	// 	})
+		$(this).parent('ol').children('.two_menu').mouseleave(function(){
+			
+			$(this).css('display','none')
+		})
+	
+})
 

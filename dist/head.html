@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-		
+	
 		<style type="text/css">
 			html,body,ol,ul,li,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0}
 			body{font-family: "微软雅黑";}
@@ -26,10 +21,11 @@
 			.topWrap_con ul li:nth-of-type(2){background: url(img/top1-bj_03.jpg) no-repeat 65px center;}
 			.topWrap_con ul li:nth-of-type(3){background: url(img/top1-bj_03.jpg) no-repeat 65px center;}
 			.topWrap_con ul li:nth-of-type(4){background: url(img/top1-bj_03.jpg) no-repeat 55px center;}
+		a:hover{
+			color: #2884c7;
+		}
 			
 		</style>
-	</head>
-	<body>
 		<!-- 头部板块 -->
 		<div id="topWrap">
 			<div class="topWrap_con">
@@ -42,6 +38,12 @@
 				</ul>
 			</div>
 		</div>
-		
-	</body>
-</html>
+		<script src="../../Day25-2019-8-16/js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$('.topWrap_con p').children('a').eq(1).click(function(){
+		window.location = 'login.html'
+	})
+	$('.topWrap_con p').children('a').eq(2).click(function(){
+		window.location = 'registor.html'
+	})
+</script>
