@@ -3,7 +3,69 @@
 	<head>
 		<meta charset="utf-8">
 		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/cart.css"/>
 	</head>
 	<body>
+		<!-- 头部板块 -->
+		<header></header>
+		<!-- logo板块 -->
+		<div class="logo">
+			<div class="logo_con">
+				<h1><img src="img/logo.png" alt=""></h1>
+				<h2>我的购物车</h2>
+				<div><p></p></div>
+			</div>
+		</div>
+		<div class="main">
+			<div class="main_con">
+				<div class="main_con_top">
+					<div class="main_con_top_l">
+						<span>全部商品</span>
+						<i>1</i>
+					</div>
+					<div class="main_con_top_r">
+						<span>配送至</span>
+						<a href="javascript:;">北京北京市朝阳区</a>
+					</div>
+				</div>
+				<div class="main_bottom">
+					<table  cellspacing="0" cellpadding="0">
+						<tr>
+							<td width="500px">商品</td>
+							<td width="90px">价格</td>
+							<td width="120px">数量</td>
+							<td width="90px">小计</td>
+							<td>操作</td>
+						</tr>
+						<!-- <tr>
+							<td>
+								<img src="img/1538281427720.jpg" ><span>Zero65底座-银色</span>
+							</td>
+							<td>399.00</td>
+							<td>
+								<span class="min">-</span><input type="text" value="1" class="int"/><span class="plu">+</span>
+							</td>
+							<td><span class="tol">399.00</span></td>
+							<td><span>删除</span></td>
+						</tr> -->
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="main_f">
+			<div class="main_foot">
+				<p><span></span><a href="javascript:;">正品保证</a></p>
+				<p><span></span><a href="javascript:;">7天无理由退货</a></p>
+				<p><span></span><a href="javascript:;">物流服务</a></p>
+				<p><span></span><a href="javascript:;">售后服务网点</a></p>
+			</div>
+		</div>
+		<footer></footer>
+		<script src="../../Day25-2019-8-16/js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/cart.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$('header').load('head.html');
+			$('footer').load('foot.html');
+		</script>
 	</body>
 </html>
